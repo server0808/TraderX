@@ -61,12 +61,12 @@ def generate_pdf(results, pair_selection, output_path="indicator_report.pdf"):
 st.title("TradeX")
 
 pair_options = {
+    "XAUUSD / BTCUSD": ("GC=F", "BTC-USD"),
     "CHFUSD / EURUSD": ("CHF=X", "EURUSD=X"),
     "S&P500 / VIX": ("^GSPC", "^VIX"),
     "JPYUSD / GBPUSD": ("JPY=X", "GBPUSD=X"),
     "BTCUSD / ETHUSD": ("BTC-USD", "ETH-USD"),
-    "XAUUSD / BTCUSD": ("GC=F", "BTC-USD"),
-}
+    }
 pair_selection = st.selectbox("Escolha os pares:", options=list(pair_options.keys()))
 pairA, pairB = pair_options[pair_selection]
 
